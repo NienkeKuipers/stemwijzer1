@@ -1,0 +1,35 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StemWijzer.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25"
+                             Padding="30,50"
+                             VerticalOptions="Center">
+
+            <Label Text="Welkom bij Stemwijzer"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold" />
+
+            <Label Text="Ontdek welke politieke partij het beste bij jou past!"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <Button Text="Begin hier"
+                    Clicked="OnBeginHereClicked"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    Padding="20,10"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    Margin="0,50,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
