@@ -1,5 +1,4 @@
 ﻿using Microsoft.Maui.Controls;
-
 namespace StemWijzer
 {
     public partial class MainPage : ContentPage
@@ -9,9 +8,9 @@ namespace StemWijzer
             InitializeComponent();
         }
 
-        private void OnBeginHereClicked(object sender, EventArgs e)
+        private async void OnBeginHereClicked(object sender, EventArgs e)
         {
-          
+            await Navigation.PushAsync(new StellingPage());
         }
     }
 }
