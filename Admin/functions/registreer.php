@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Check if the username already exists
-    $stmt = $conn->prepare("SELECT id FROM users WHERE username = ?");
+    $stmt = $conn->prepare("SELECT idUser FROM gebruiker WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->store_result();
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<script>alert("Username already exists. Please choose another username."); window.location.href = "registreerpagina.php";</script>';
     } else {
         // Insert the new user into the database
-        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO gebruiker (username, password) VALUES (?, ?)");
         $stmt->bind_param("ss", $username, $hashed_password);
         if ($stmt->execute()) {
             echo '<script>alert("Registration successful!"); window.location.href = "index.php";</script>';
