@@ -13,7 +13,8 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 300px;
+    width: 80%;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -22,12 +23,17 @@ h2 {
     color: #333;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
 }
 
 button {
@@ -39,19 +45,51 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-.register-link, .login-link {
+.register-link, .login-link, .dashboard-link {
     margin-top: 20px;
     display: block;
     color: #007BFF;
     text-decoration: none;
 }
 
-.register-link:hover, .login-link:hover {
+.register-link:hover, .login-link:hover, .dashboard-link:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td a {
+    margin-right: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+td a:hover {
     text-decoration: underline;
 }

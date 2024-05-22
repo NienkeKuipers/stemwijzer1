@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Verify the password
     if ($stmt->num_rows > 0 && password_verify($submitted_password, $stored_password)) {
-        echo '<script>alert("Login successful!"); window.location.href = "../index.php";</script>';
+        echo '<script>alert("Login successful!"); window.location.href = "../admin/dashboard.php";</script>';
     } else {
         echo '<script>alert("Invalid username or password."); window.location.href = "../index.php";</script>';
     }
