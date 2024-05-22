@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check if passwords match
     if ($password !== $confirm_password) {
-        echo '<script>alert("Passwords do not match."); window.location.href = "register.html";</script>';
+        echo '<script>alert("Passwords do not match."); window.location.href = "registreerpagina.php";</script>';
         exit();
     }
 

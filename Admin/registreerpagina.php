@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form action="functions/registeer.php" method="post">
+        <form action="functions/registreer.php" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="confirm_password" placeholder="Confirm Password" required>
